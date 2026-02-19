@@ -1,6 +1,9 @@
 Feature: Login Feature
 
+  
     As a registred user i want to login to the system.
+    
+    @smokeTest
     Scenario Outline: Login with valid credentials
         Given User is on the home page
         And user click on login link
@@ -14,3 +17,8 @@ Feature: Login Feature
         | bipin1234   | Password_1234   |
         | bipin4321   | Password_1234   |
     
+    @smokeTest
+    Scenario: Validate Forgot password
+
+    @regressionTest
+    Scenario: Validate Sign up functionality
