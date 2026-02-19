@@ -21,16 +21,16 @@ Given('user click on login link', async function () {
 
 
 
-When('user enters valid username as {string}', async function (string) {
-    await page.locator('//input[@id="loginusername"]').fill('bipin1234');
+When('user enters valid username as {string}', async function (userName) {
+    await page.locator('//input[@id="loginusername"]').fill(userName);
 
 });
 
 
 
-When('user enters valid password as {string}', async function (string) {
+When('user enters valid password as {string}', async function (password) {
 
-    await page.locator('//input[@id="loginpassword"]').fill('Password_1234');
+    await page.locator('//input[@id="loginpassword"]').fill(password);
 });
 
 
