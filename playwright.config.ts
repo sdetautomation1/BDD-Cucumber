@@ -25,11 +25,6 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-
-    launchOptions: {
-      // 1. Add the start-maximized argument for Chromium
-      args: ["--start-maximized"], 
-    },
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
@@ -41,13 +36,7 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-     
-       use: {
-        // 2. Remove or comment out default device descriptors if present
-        // ...devices["Desktop Chrome"], 
-        // 3. Set the viewport to null so the argument can take effect
-        viewport: null,
-      },
+      use: { ...devices['Desktop Chrome'] },
     },
 
     {
